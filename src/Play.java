@@ -26,24 +26,23 @@ public class Play {
                 System.out.println(man.getM_name() + "你选择" + cp.getCp_name() + "对战");
             }
             System.out.println("请出拳：1：剪刀；2：石头、3：布");
-            int cp_radom = cp.play();
-            int man_num = input.nextInt();
-            String manResult = fit(man_num);
-            String cpResult = fit(cp_radom);
+            int cpRadom = cp.play();
+            int manNum = input.nextInt();
+            String manResult = fit(manNum);
+            String cpResult = fit(cpRadom);
             System.out.println("你出拳：" + manResult);
             System.out.println("电脑出拳：" + cpResult);
-            if (cp_radom == 1 && man_num == 3 || cp_radom == 2 && man_num == 1 || cp_radom == 3 && man_num == 2) {
+            if (cpRadom == 1 && manNum == 3 || cpRadom == 2 && manNum == 1 || cpRadom == 3 && manNum == 2) {
                 System.out.println("你真菜，你输给了" + cp.getCp_name());
                 int cps = cp.getCp_score() + 1;
                 cp.setCp_score(cps);
-
             }
-            if (cp_radom == 3 && man_num == 1 || cp_radom == 1 && man_num == 2 || cp_radom == 2 && man_num == 3) {
+            if (cpRadom == 3 && manNum == 1 || cpRadom == 1 && manNum == 2 || cpRadom == 2 && manNum == 3) {
                 System.out.println("你真牛，你赢了" + cp.getCp_name());
                 int mans = man.getM_score() + 1;
                 man.setM_score(mans);
             }
-            if (cp_radom == man_num) {
+            if (cpRadom == manNum) {
                 System.out.println("平手");
                 flag++;
             }
