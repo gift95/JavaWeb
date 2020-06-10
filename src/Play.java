@@ -28,10 +28,10 @@ public class Play {
             System.out.println("请出拳：1：剪刀；2：石头、3：布");
             int cp_radom = cp.play();
             int man_num = input.nextInt();
-            String manresult = fit(man_num);
-            String cpresult = fit(cp_radom);
-            System.out.println("你出拳：" + manresult);
-            System.out.println("电脑出拳：" + cpresult);
+            String manResult = fit(man_num);
+            String cpResult = fit(cp_radom);
+            System.out.println("你出拳：" + manResult);
+            System.out.println("电脑出拳：" + cpResult);
             if (cp_radom == 1 && man_num == 3 || cp_radom == 2 && man_num == 1 || cp_radom == 3 && man_num == 2) {
                 System.out.println("你真菜，你输给了" + cp.getCp_name());
                 int cps = cp.getCp_score() + 1;
